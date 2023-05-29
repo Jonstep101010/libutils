@@ -6,11 +6,15 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 13:08:13 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/05/24 15:12:55 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/05/29 18:55:06 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+int	put_char(char c);
+int	put_str(char *str);
+int	put_nbr(size_t n, char *base, size_t slen);
 
 /*
 @brief calls putnbr with specific parameters
@@ -62,8 +66,9 @@ static int	check_formatter(va_list args, int specifier, int *size)
 {
 	int	check;
 
+	check = 0;
 	if (specifier == 'c')
-		check = ft_putchar(va_arg(args, int));
+		check = put_char(va_arg(args, int));
 	if (specifier == 's')
 		check = put_str(va_arg(args, char *));
 	if (specifier == 'p')
@@ -77,7 +82,7 @@ static int	check_formatter(va_list args, int specifier, int *size)
 	if (specifier == 'X')
 		check = put_nbr(va_arg(args, unsigned int), "0123456789ABCDEF", 16);
 	if (specifier == '%')
-		check = ft_putchar('%');
+		check = put_char('%');
 	if (check < 0)
 		return (FAIL);
 	return (*size += check);
@@ -102,7 +107,7 @@ int	ft_printf(const char *format, ...)
 			if (*(format + 1) && check_formatter(args, *(++format), &size) < 0)
 				return (-1);
 		}
-		else if (ft_putchar(*format) <= FAIL)
+		else if (put_char(*format) <= FAIL)
 			return (-1);
 		else
 			size++;

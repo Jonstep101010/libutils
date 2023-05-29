@@ -1,33 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnchr.c                                       :+:      :+:    :+:   */
+/*   put_nbr.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/28 17:44:23 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/04/28 19:20:19 by jschwabe         ###   ########.fr       */
+/*   Created: 2023/05/29 14:18:49 by jschwabe          #+#    #+#             */
+/*   Updated: 2023/05/29 16:13:22 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-@brief returns index of a character within a string
-@param s string to search
-@param c (int) character to find
-@return index of c in s
+** @brief write a number by specified base and length
+** 
+** @param n number to write
+** @param base base to use for writing
+** @param slen length of base
+** @return 
 */
-int	ft_strnchr(const char *s, int c)
+int	put_nbr(size_t n, char *base, size_t slen)
 {
-	int	i;
+	int	size;
 
-	i = 0;
-	while (*s)
+	size = 0;
+	if (n >= slen)
 	{
-		if (*(s++) == (char) c)
-			return (i);
-		i++;
+		size += put_nbr(n / slen, base, slen);
+		if (size < 0)
+			return (-1);
 	}
-	return (-1);
+	size += put_char(base[n % slen]);
+	return (size);
 }

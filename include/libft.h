@@ -6,12 +6,14 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 16:26:52 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/04/28 17:50:35 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/05/29 16:33:56 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# include "ft_printf.h"
+# include "get_next_line.h"
 # include <stdlib.h>
 # include <string.h>
 # include <stdio.h>
@@ -81,6 +83,9 @@ void		ft_lstclear(t_list **lst, void (*del)(void *));
 void		ft_lstiter(t_list *lst, void (*f)(void *));
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
-int			ft_putchar(char c);
-int			ft_strnchr(const char *s, int c);
+int			put_char(char c);
+int			put_str(char *s);
+int			strn_chr(const char *s, int c);
+int			put_nbr(size_t n, char *base, size_t slen);
+
 #endif

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   put_char.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 16:39:54 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/04/28 19:21:32 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/05/29 14:42:09 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 @param c character to write
 @return return 1, -1 if write fails
 */
-int	ft_putchar(char c)
+int	put_char(char c)
 {
 	return (write(1, &c, 1));
 }

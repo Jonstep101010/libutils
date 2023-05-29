@@ -1,37 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   put_utils.c                                        :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/25 12:40:48 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/05/02 20:42:42 by jschwabe         ###   ########.fr       */
+/*   Created: 2023/04/19 13:23:58 by jschwabe          #+#    #+#             */
+/*   Updated: 2023/05/29 18:52:10 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-int	put_nbr(size_t n, char *base, size_t slen)
-{
-	int	size;
+# define SPECIFIER "cspdiuxX%"
+# define MARKER	'%'
+# define FAIL -1
 
-	size = 0;
-	if (n >= slen)
-	{
-		size += put_nbr(n / slen, base, slen);
-		if (size < 0)
-			return (FAIL);
-	}
-	size += ft_putchar(base[n % slen]);
-	return (size);
-}
+# include "libft.h"
+# include <stdarg.h>
+# include <limits.h>
+# include <string.h>
 
-int	put_str(char *s)
-{
-	if (!s)
-		s = "(null)";
-	if (write(1, s, ft_strlen(s)) < 0)
-		return (FAIL);
-	return (ft_strlen(s));
-}
+int		ft_printf(const char *format, ...);
+#endif
