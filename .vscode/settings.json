@@ -1,0 +1,6 @@
+{
+	"C_Cpp.codeAnalysis.clangTidy.checks.disabled": [
+		"clang-analyzer-core.NullDereference",
+		"clang-analyzer-core.uninitialized.UndefReturn"
+	]
+}
