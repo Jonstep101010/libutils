@@ -38,6 +38,7 @@ $(NAME): $(OBJS)
 	$(info CREATED: $(NAME))
 
 $(BUILD_DIR)/%.o: %.c
+	mkdir -p .build
 	$(CC) $(CFLAGS) $(CPPFLAGS) -c $< $(INCS) -o $@
 	$(info CC $<)
 
@@ -46,6 +47,7 @@ clean:
 
 fclean: clean
 	$(RM) $(NAME)
+	$(RM) .build
 
 re:
 	$(MAKE) fclean

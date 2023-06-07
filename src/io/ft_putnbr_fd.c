@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 20:49:21 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/05/20 20:41:22 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/06/07 14:09:14 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_putnbr_fd(int n, int fd)
 	nbrs = "0123456789";
 	if (n == -2147483648)
 	{
-		return (ft_putstr_fd("-2147483648", fd));
+		ft_putstr_fd("-2147483648", fd);
 	}
 	if (n < 0)
 	{
