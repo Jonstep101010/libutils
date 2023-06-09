@@ -34,13 +34,21 @@ ARFLAGS		:= -rcs
 all: $(NAME)
 
 $(NAME): $(OBJS)
+	echo "source files compiled: \033[0;32m\xE2\x9C\x93\033[0m"
 	$(AR) $(ARFLAGS) $@ $^
-	$(info CREATED: $(NAME))
+	sh ./aart.sh
+# $(info CREATED:)
 
 $(BUILD_DIR)/%.o: %.c
 	mkdir -p .build
-	$(CC) $(CFLAGS) $(CPPFLAGS) -c $< $(INCS) -o $@
-	$(info CC $<)
+	for file in $(BUILD_DIR)/%.o; do \
+		$(CC) $(CFLAGS) $(CPPFLAGS) -c $< $(INCS) -o $@ && \
+		printf "\033[0;32m\xE2\x9C\x93\033[0m";\
+	done
+	for file in $(BUILD_DIR)/%.o; do \
+		printf "\r";\
+	done
+#$(info CC $<)
 
 clean:
 	$(RM) $(OBJS) $(DEPS)
