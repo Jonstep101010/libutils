@@ -1,6 +1,5 @@
 NAME		:= libft.a
 
-
 INCS		:= -I ./include
 
 SRC_DIR		:= src
@@ -37,7 +36,6 @@ $(NAME): $(OBJS)
 	echo "source files compiled: \033[0;32m\xE2\x9C\x93\033[0m"
 	$(AR) $(ARFLAGS) $@ $^
 	sh ./aart.sh
-# $(info CREATED:)
 
 $(BUILD_DIR)/%.o: %.c
 	mkdir -p .build
@@ -63,5 +61,7 @@ re:
 
 .PHONY: clean fclean re
 .SILENT:
+
+
 
 -include $(DEPS)
