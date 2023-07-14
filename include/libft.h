@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 16:26:52 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/06/07 14:06:48 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/07/14 14:38:54 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include "ft_printf.h"
 # include "get_next_line.h"
 # include <stdlib.h>
+# include <stdbool.h>
 # include <string.h>
 # include <stdio.h>
 # include <ctype.h>
@@ -52,6 +53,7 @@ void		*ft_memchr(const void *ptr, int c, size_t n);
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
 char		*ft_strnstr(const char *big, const char *little, size_t len);
 int			ft_atoi(const char *str);
+long		ft_atol(const char *s);
 
 void		*ft_calloc(size_t nitems, size_t size);
 char		*ft_strdup(const char *s);

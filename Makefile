@@ -12,7 +12,9 @@ SRC_GNL		:= get_next_line.c get_next_line_utils.c
 SRC_IO		:= ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c put_char.c put_str.c put_nbr.c
 SRC_LIST	:= ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c ft_lstiter.c ft_lstlast.c ft_lstmap.c ft_lstnew.c ft_lstsize.c
 SRC_MEM		:= ft_bzero.c ft_calloc.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c
-SRC_STR		:= ft_split.c ft_strchr.c ft_strdup.c ft_strjoin.c ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c ft_atoi.c ft_itoa.c eol.c
+SRC_STR		:= ft_split.c ft_strchr.c ft_strdup.c ft_strjoin.c ft_strlcat.c ft_strlcpy.c ft_strlen.c \
+				ft_strmapi.c ft_strncmp.c ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c ft_atoi.c ft_itoa.c \
+				 eol.c atol.c
 SRC_PRINTF	:= ft_printf.c
 
 SRCS		:= $(SRC_ARR) $(SRC_CHAR) $(SRC_GNL) $(SRC_IO) $(SRC_LIST) $(SRC_MEM) $(SRC_STR) $(SRC_PRINTF)
