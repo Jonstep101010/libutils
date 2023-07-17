@@ -6,14 +6,14 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 16:26:52 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/07/14 14:38:54 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/07/15 19:30:43 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include "ft_printf.h"
-# include "get_next_line.h"
+
+# include <limits.h>
 # include <stdlib.h>
 # include <stdbool.h>
 # include <string.h>
