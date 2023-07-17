@@ -24,7 +24,7 @@ OBJS		:= $(addprefix $(BUILD_DIR)/, $(SRCS:%.c=%.o))
 DEPS		:= $(OBJS:.o=.d)
 
 CC			:= clang
-CFLAGS		:= -Wall -Wextra -Werror
+CFLAGS		?= -Wall -Wextra -Werror -g
 CPPFLAGS	:= -MMD -MP
 
 RM			:= rm -rf
