@@ -5,6 +5,7 @@ This is a library of functions that I use in
 - libft
 - ft_printf
 - get_next_line
+- push_swap
 as well as helper functions.
 
 ## Usage
