@@ -2,9 +2,7 @@ NAME		:= libft.a
 
 INCS		:= -I ./include
 
-SRC_DIR		:= src
-DIRS		:= arr char gnl io list memory string printf
-VPATH		:= $(addprefix $(SRC_DIR)/,$(DIRS))
+VPATH		:= src/arr src/char src/gnl src/io src/list src/memory src/string src/printf
 
 SRC_ARR		:= arr_free.c arr_len.c arr_dup.c
 SRC_CHAR	:= ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_tolower.c ft_toupper.c
@@ -33,11 +31,19 @@ MAKEFLAGS	+= --no-print-directory
 ARFLAGS		:= -rcs
 
 all: $(NAME)
+	@printf "\n"
+	@echo "\033[0;32m      :::        ::::::::::: :::::::::  :::::::::: :::::::::::"
+	@echo "\033[0;32m     :+:            :+:     :+:    :+: :+:            :+:"
+	@echo "\033[0;32m    +:+            +:+     +:+    +:+ +:+            +:+"
+	@echo "\033[0;32m   +#+            +#+     +#++:++#+  :#::+::#       +#+"
+	@echo "\033[0;32m  +#+            +#+     +#+    +#+ +#+            +#+"
+	@echo "\033[0;32m #+#            #+#     #+#    #+# #+#            #+#"
+	@echo "\033[0;32m########## ########### #########  ###            ###\033[0m"
+	@printf "\n"
 
 $(NAME): $(OBJS)
 	echo "\nlibft files compiled: \033[0;32m\xE2\x9C\x93\033[0m"
 	$(AR) $(ARFLAGS) $@ $^
-	sh ./aart.sh
 
 $(BUILD_DIR)/%.o: %.c
 	mkdir -p .build
@@ -56,7 +62,7 @@ re:
 	$(MAKE) all
 
 .PHONY: clean fclean re
-.SILENT:
+# .SILENT:
 
 
 
