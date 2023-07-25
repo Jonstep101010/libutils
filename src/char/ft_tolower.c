@@ -6,17 +6,17 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 13:11:46 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/04/02 20:01:11 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/07/25 15:46:03 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-/// @brief converts ascii alphabet values to lowercase
-/// @param ch value of character
-/// @return value, whether modified or not
-*/
+/**
+ * @brief ascii uppercase to lowercase
+ * @param ch value of character
+ * @return value (modified or not)
+ */
 int	ft_tolower(int ch)
 {
 	if ((ch > 64) && (ch < 91))

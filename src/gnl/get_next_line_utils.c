@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 14:26:30 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/05/29 19:36:50 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/07/25 16:26:01 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,12 +47,6 @@ char	*str_bzero(char *s, int n)
 	return (s);
 }
 
-/*
-** @brief copy content into new buffer, free old using free_buf
-** implements parts of substr funcionality for copying buffer
-** @param buffer to replace
-** @return new buffer, NULL on failure
-*/
 void	clean_buffer(char *buffer)
 {
 	int	i;

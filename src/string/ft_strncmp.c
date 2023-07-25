@@ -6,20 +6,12 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 16:28:19 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/04/02 20:03:52 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/07/25 16:50:12 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** @brief compare strings
-** @param s1 first string to compare
-** @param s2 second string to compare
-** @param n maximum characters to compare
-** @return s1 less, greater or equal s2
-** @details compares at most the first n bytes of s1 and s2
-*/
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned char	*ps1;

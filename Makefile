@@ -26,7 +26,7 @@ CFLAGS		?= -Wall -Wextra -Werror -g
 CPPFLAGS	:= -MMD -MP
 
 RM			:= rm -rf
-MAKEFLAGS	+= --no-print-directory
+MAKEFLAGS	+= --no-print-directory --silent
 
 ARFLAGS		:= -rcs
 
@@ -63,7 +63,5 @@ re:
 
 .PHONY: clean fclean re
 # .SILENT:
-
-
 
 -include $(DEPS)

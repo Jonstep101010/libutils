@@ -6,25 +6,12 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 19:01:42 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/05/20 19:01:49 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/07/25 16:35:17 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** @brief return substring for string - allocate memory
-** @param s string from which to create substring
-** @param start start index of substring in s
-** @param len maximum length of substring
-** @return substring, NULL if allocation fails
-** @details check if string is empty, set length of string
-** \details guard against index start being greater than length -
-** \details return "" (size 1); check len against size - index (substr)
-** \details if so: set len to them; allocate with malloc(len+1)
-** \details check for empty substr; set to values in string for <len
-** \details terminate & return
-*/
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;

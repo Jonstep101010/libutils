@@ -6,17 +6,17 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 20:49:21 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/06/07 14:09:14 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/07/25 15:57:23 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** @brief output int n to file descriptor
-** @param n int to output
-** @param fd file descriptor on which to write
-*/
+/**
+ * @brief output int n to file descriptor
+ * @param n int to output
+ * @param fd file descriptor on which to write
+ */
 void	ft_putnbr_fd(int n, int fd)
 {
 	char	*nbrs;

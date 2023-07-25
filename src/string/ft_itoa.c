@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 11:34:09 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/05/20 20:05:36 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/07/25 15:29:05 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,11 +57,6 @@ static char	*convert_int(char *s, size_t digits, long int num, int n)
 	return (s);
 }
 
-/*
-** @brief convert int to char string
-** @param n int to convert
-** @return pointer to char string, NULL if allocation fails
-*/
 char	*ft_itoa(int n)
 {
 	size_t		digits;

@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 13:08:13 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/07/14 16:36:11 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/07/25 17:01:05 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,11 +84,6 @@ static int	check_formatter(va_list args, int specifier, int *size)
 	return (*size += check);
 }
 
-/*
-@brief basic functionality of printf
-@param input, formatted input
-@return length (-1 if failure)
-*/
 int	ft_printf(const char *format, ...)
 {
 	va_list		args;

@@ -10,11 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** @brief checks if given value is a digit
-** @param c value of character
-** @return 1 if true, 0 if not
-*/
+/**
+ * @brief checks if given value is a digit
+ * @param c value of character
+ * @return 1 if true, 0 if not
+ */
 int	ft_isdigit(int c)
 {
 	if ((c > 47) && (c < 58))

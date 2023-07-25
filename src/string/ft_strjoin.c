@@ -6,18 +6,12 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 16:28:24 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/05/20 19:30:01 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/07/25 16:42:07 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** @brief allocates and returns new string, concatenation s1 and s2
-** @param s1 prefix string
-** @param s2 suffix string
-** @return new string, NULL if allocation fails
-*/
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*strcat;

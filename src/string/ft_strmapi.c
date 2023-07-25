@@ -6,18 +6,12 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 17:10:59 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/05/20 20:11:42 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/07/25 16:49:15 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** @brief iterate function over characters of string, return applied copy
-** @param s string to iterate on
-** @param f function to apply to each char
-** @return string created from application of f, NULL if allocation fails
-*/
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char			*cpy;

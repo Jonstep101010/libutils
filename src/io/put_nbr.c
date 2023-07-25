@@ -6,20 +6,12 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 14:18:49 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/05/29 16:13:22 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/07/25 16:00:40 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** @brief write a number by specified base and length
-** 
-** @param n number to write
-** @param base base to use for writing
-** @param slen length of base
-** @return 
-*/
 int	put_nbr(size_t n, char *base, size_t slen)
 {
 	int	size;
