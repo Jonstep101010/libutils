@@ -1,6 +1,14 @@
 {
 	"C_Cpp.codeAnalysis.clangTidy.checks.disabled": [
 		"clang-analyzer-core.NullDereference",
-		"clang-analyzer-core.uninitialized.UndefReturn"
-	]
+		"clang-analyzer-core.uninitialized.UndefReturn",
+		"clang-analyzer-core.UndefinedBinaryOperatorResult"
+	],
+	"cmake.configureOnOpen": false,
+	"editor.tabSize": 4,
+	"editor.insertSpaces": false,
+	"editor.renderWhitespace": "all",
+	"files.trimTrailingWhitespace": true,
+	"files.insertFinalNewline": true,
+	"C_Cpp_Runner.cStandard": "c99",
 }

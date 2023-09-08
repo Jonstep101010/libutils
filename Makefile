@@ -5,7 +5,7 @@ INCS		:= -I ./include
 VPATH		:= src/arr src/char src/gnl src/io src/list src/memory src/string src/printf
 
 SRC_ARR		:= arr_free.c arr_len.c arr_dup.c
-SRC_CHAR	:= ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_tolower.c ft_toupper.c
+SRC_CHAR	:= ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_tolower.c ft_toupper.c ft_isspace.c
 SRC_GNL		:= get_next_line.c get_next_line_utils.c
 SRC_IO		:= ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c put_char.c put_str.c put_nbr.c
 SRC_LIST	:= ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c ft_lstiter.c ft_lstlast.c ft_lstmap.c ft_lstnew.c ft_lstsize.c
@@ -45,13 +45,15 @@ $(NAME): $(OBJS)
 	echo "\nlibft files compiled: \033[0;32m\xE2\x9C\x93\033[0m"
 	$(AR) $(ARFLAGS) $@ $^
 
-$(BUILD_DIR)/%.o: %.c
-	mkdir -p .build
+$(BUILD_DIR)/%.o: %.c | $(BUILD_DIR)
 	$(CC) $(CFLAGS) $(CPPFLAGS) -c $< $(INCS) -o $@
 # $(info CC $<)
+$(BUILD_DIR):
+	mkdir -p .build
 
 clean:
 	$(RM) $(OBJS) $(DEPS)
+	$(RM) .build
 
 fclean: clean
 	$(RM) $(NAME)
