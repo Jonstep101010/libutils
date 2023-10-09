@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 16:26:52 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/07/25 17:07:41 by jschwabe         ###   ########.fr       */
+/*   Updated: 2023/10/07 13:10:38 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -220,8 +220,8 @@ char		*ft_strtrim(char const *s1, char const *set);
  * @param c delimiter char
  * @return array of new strings - resulting from split,
  * \return NULL if allocation fails, input: empty, only/no del
- * \details array terminated (NULL pointer)
- * \details handle leading & trailing delimiting characters - no empty substrings
+ * array NULL terminated
+ * handle leading & trailing delimiting characters - no empty substrings
  */
 char		**ft_split(char const *s, char c);
 
