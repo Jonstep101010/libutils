@@ -1,0 +1,110 @@
+---
+:project:
+  :use_exceptions: FALSE
+  :use_test_preprocessor: TRUE
+  :use_deep_dependencies: TRUE
+  :use_auxiliary_dependencies: TRUE
+  :use_auto_dependencies: TRUE
+  :build_root: .build_libft
+  :release_build: TRUE
+  :test_file_prefix: test_
+  :which_ceedling: gem
+  :ceedling_version: '?'
+  :default_tasks:
+    - release
+
+:release_build:
+  :output: libft.a
+  :use_assembly: FALSE
+
+:environment:
+
+:paths:
+  :source:
+    - src/arr/
+    - src/char/
+    - src/gnl/
+    - src/io/
+    - src/list/
+    - src/memory/
+    - src/printf/
+    - src/string/
+  :include:
+    - +:include/
+
+:defines:
+  # in order to add common defines:
+  #  1) remove the trailing [] from the :common: section
+  #  2) add entries to the :common: section (e.g. :test: has TEST defined)
+  :common: &common_defines []
+  :test:
+    - *common_defines
+    - TEST
+  :test_preprocess:
+    - *common_defines
+    - TEST
+
+:cmock:
+  :mock_prefix: mock_
+  :when_no_prototypes: :warn
+  :enforce_strict_ordering: TRUE
+  :plugins:
+    - :ignore
+    - :callback
+  :treat_as:
+    uint8:    HEX8
+    uint16:   HEX16
+    uint32:   UINT32
+    int8:     INT8
+    bool:     UINT8
+
+#:tools:
+# Ceedling defaults to using gcc for compiling, linking, etc.
+# As [:tools] is blank, gcc will be used (so long as it's in your system path)
+# See documentation to configure a given toolchain for use
+:tools:
+  # :test_compiler:
+  #   :executable: clang
+  #   :name: 'clang test compiler'
+  #   :arguments:
+  #     - -I"$": COLLECTION_PATHS_TEST_SUPPORT_SOURCE_INCLUDE_VENDOR
+  #     - -c ${1}
+  #     - -o ${2}
+  # :test_linker:
+  #   :executable: clang
+  #   :name: 'clang test linker'
+  #   :arguments:
+  #     - ${1}
+  #     - -o ${2}
+  #     - -Linclude/libft/
+  #     - -lft
+  :release_compiler:
+    :executable: clang              #exists in system search path
+    :name: 'clang release compiler'
+    :arguments:
+      - -Wall
+      - -Wextra
+      - -Werror
+      - -I"$": COLLECTION_PATHS_TEST_SUPPORT_SOURCE_INCLUDE_VENDOR
+      - -I"$": COLLECTION_PATHS_TEST_TOOLCHAIN_INCLUDE
+      - -MMD -MP
+      - -c ${1}
+      - -o ${2}
+  :release_linker:
+    :executable: ar   #absolute file path
+    :name: 'clang release linker'
+    :arguments:
+      - rcs
+      - ${2}
+      - ${1}
+  :release_dependencies_generator:
+    :executable: clang
+    :name: Clang
+
+:plugins:
+  :load_paths:
+    - "#{Ceedling.load_path}"
+  :enabled:
+    - xml_tests_report
+    - compile_commands_json
+...
