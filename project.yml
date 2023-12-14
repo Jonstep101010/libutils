@@ -5,7 +5,7 @@
   :use_deep_dependencies: TRUE
   :use_auxiliary_dependencies: TRUE
   :use_auto_dependencies: TRUE
-  :build_root: .build_libft
+  :build_root: build
   :release_build: TRUE
   :test_file_prefix: test_
   :which_ceedling: gem
