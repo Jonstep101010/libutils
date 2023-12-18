@@ -52,4 +52,11 @@ Mkfile.old
 dkms.conf
 .DS_Store
 **/.DS_Store
+<<<<<<< Updated upstream
 .build_libft
+build
+=======
+
+
+build/
+>>>>>>> Stashed changes

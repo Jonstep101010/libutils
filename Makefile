@@ -29,7 +29,8 @@ RM			:= rm -rf
 MAKEFLAGS	+= --no-print-directory --silent
 
 ARFLAGS		:= -rcs
-
+ceedling:
+	ceedling release
 all: $(NAME)
 	@printf "\n"
 	@echo "\033[0;32m      :::        ::::::::::: :::::::::  :::::::::: :::::::::::"
