@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 16:26:52 by jschwabe          #+#    #+#             */
-/*   Updated: 2024/01/15 11:31:40 by jschwabe         ###   ########.fr       */
+/*   Updated: 2024/01/16 16:12:39 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -274,9 +274,9 @@ int			strn_chr(const char *s, int c);
  */
 int			put_nbr(size_t n, char *base, size_t slen);
 void		arr_free(char **arr);
-size_t		arr_len(char **arr);
-char		**arr_dup(char **arr);
-void		print_arr(char **arr);
+size_t		arr_len(const char **arr);
+char		**arr_dup(const char **arr);
+void		print_arr(const char **arr);
 
 /**
  * @brief free the memory, set it to NULL
