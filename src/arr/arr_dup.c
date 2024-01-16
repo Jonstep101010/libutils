@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 20:31:59 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/07/25 15:54:28 by jschwabe         ###   ########.fr       */
+/*   Updated: 2024/01/16 16:20:04 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /**
  * @brief strdup but for a 2d array
  */
-char	**arr_dup(char **arr)
+char	**arr_dup(const char **arr)
 {
 	char	**dup;
 	size_t	len;
@@ -24,7 +24,7 @@ char	**arr_dup(char **arr)
 	if (!arr)
 		return (NULL);
 	len = arr_len(arr) + 1;
-	dup = malloc(sizeof(*dup) * (len));
+	dup = (char **) ft_calloc(sizeof(char *), len);
 	if (!dup)
 		return (NULL);
 	i = -1;
