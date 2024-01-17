@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   arr_len.c                                          :+:      :+:    :+:   */
+/*   print_arr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/30 20:28:02 by jschwabe          #+#    #+#             */
-/*   Updated: 2024/01/16 13:10:17 by jschwabe         ###   ########.fr       */
+/*   Created: 2024/01/15 11:23:16 by jschwabe          #+#    #+#             */
+/*   Updated: 2024/01/16 13:09:51 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/**
- * @brief strlen but for an array
- */
-size_t	arr_len(const char **arr)
+void	print_arr(const char **arr)
 {
-	size_t	len;
+	int	i;
 
-	len = 0;
-	while (arr[len])
-		++len;
-	return (len);
+	i = 0;
+	if ((!arr) || (!*arr))
+		return ;
+	while (arr[i])
+	{
+		ft_printf("[%d]\"%s\"", i, arr[i]);
+		i++;
+	}
+	ft_printf("\n");
 }
