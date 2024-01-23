@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 16:26:52 by jschwabe          #+#    #+#             */
-/*   Updated: 2024/01/16 16:12:39 by jschwabe         ###   ########.fr       */
+/*   Updated: 2024/01/23 14:37:38 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -283,6 +283,15 @@ void		print_arr(const char **arr);
  * 
  * @param tofree pointer to freeable memory
  */
-void	free_null(void *tofree);
+void		free_null(void *tofree);
+
+/**
+ * @brief counts occurences of c in s
+ *
+ * @param s to search
+ * @param c to find/count
+ * @return int count
+ */
+int			str_cchr(const char *s, char c);
 
 #endif
