@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 20:28:02 by jschwabe          #+#    #+#             */
-/*   Updated: 2024/01/16 13:10:17 by jschwabe         ###   ########.fr       */
+/*   Updated: 2024/01/25 19:21:05 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ size_t	arr_len(const char **arr)
 	size_t	len;
 
 	len = 0;
-	while (arr[len])
-		++len;
+	while (arr && arr[len] != NULL)
+		len++;
 	return (len);
 }
