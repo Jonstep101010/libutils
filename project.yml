@@ -82,6 +82,7 @@
     :executable: clang              #exists in system search path
     :name: 'clang release compiler'
     :arguments:
+      - -g3
       - -Wall
       - -Wextra
       - -Werror
