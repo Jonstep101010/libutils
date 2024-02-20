@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   print_arr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/24 19:03:34 by jschwabe          #+#   #+#            */
-/*   Updated: 2023/04/03 12:53:21 by jschwabe         ###  ########.fr       */
+/*   Created: 2024/01/15 11:23:16 by jschwabe          #+#    #+#             */
+/*   Updated: 2024/02/20 13:11:59 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "arr_utils.h"
+#include "ft_printf.h"
 
-void	*ft_calloc(size_t nitems, size_t size)
+void	print_arr(char **arr)
 {
-	void	*ptr;
+	size_t	i;
+	size_t	len;
 
-	if (nitems && (nitems * size) / nitems != size)
-		return (0);
-	ptr = malloc(nitems * size);
-	if (!ptr)
-		return (0);
-	return ((ft_memset(ptr, 0, nitems * size)));
+	i = 0;
+	len = arr_len((const char **)arr);
+	if (!arr)
+		return ;
+	while (i <= len)
+	{
+		ft_printf("[%d]\"%s\"", i, arr[i]);
+		i++;
+	}
+	ft_printf("\n");
 }

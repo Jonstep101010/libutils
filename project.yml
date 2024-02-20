@@ -10,27 +10,17 @@
   :test_file_prefix: test_
   :which_ceedling: gem
   :ceedling_version: '?'
-  :default_tasks:
-    - release
 
 :release_build:
-  :output: libft.a
+  :output: libutils.a
   :use_assembly: FALSE
-
-:environment:
-
 :paths:
   :source:
-    - src/arr/
-    - src/char/
-    - src/gnl/
-    - src/io/
-    - src/list/
-    - src/memory/
-    - src/printf/
+    - src/array/
     - src/string/
   :include:
     - +:include/
+
 
 :defines:
   # in order to add common defines:
@@ -63,21 +53,6 @@
 # As [:tools] is blank, gcc will be used (so long as it's in your system path)
 # See documentation to configure a given toolchain for use
 :tools:
-  # :test_compiler:
-  #   :executable: clang
-  #   :name: 'clang test compiler'
-  #   :arguments:
-  #     - -I"$": COLLECTION_PATHS_TEST_SUPPORT_SOURCE_INCLUDE_VENDOR
-  #     - -c ${1}
-  #     - -o ${2}
-  # :test_linker:
-  #   :executable: clang
-  #   :name: 'clang test linker'
-  #   :arguments:
-  #     - ${1}
-  #     - -o ${2}
-  #     - -Linclude/libft/
-  #     - -lft
   :release_compiler:
     :executable: clang              #exists in system search path
     :name: 'clang release compiler'
@@ -86,10 +61,11 @@
       - -Wall
       - -Wextra
       - -Werror
-      - -I"$": COLLECTION_PATHS_TEST_SUPPORT_SOURCE_INCLUDE_VENDOR
-      - -I"$": COLLECTION_PATHS_TEST_TOOLCHAIN_INCLUDE
+      - -I../libftprintf -I../libft -I./include
       - -MMD -MP
       - -c ${1}
+      - -I"$": COLLECTION_PATHS_TEST_SUPPORT_SOURCE_INCLUDE_VENDOR
+      - -I"$": COLLECTION_PATHS_TEST_TOOLCHAIN_INCLUDE
       - -o ${2}
   :release_linker:
     :executable: ar   #absolute file path

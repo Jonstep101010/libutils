@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   arr_free.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/21 13:00:03 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/07/25 16:59:52 by jschwabe         ###   ########.fr       */
+/*   Created: 2023/05/30 20:07:56 by jschwabe          #+#    #+#             */
+/*   Updated: 2024/02/20 11:51:56 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
-void	*ft_memset(void *str, int c, size_t n)
+void	arr_free(void **arr)
 {
-	size_t			i;
-	unsigned char	*ptr;
+	int	i;
 
-	ptr = str;
-	i = 0;
-	while (i < n)
+	i = -1;
+	while (arr && arr[++i])
 	{
-		ptr[i] = c;
-		i++;
+		free(arr[i]);
+		arr[i] = NULL;
 	}
-	return (str);
+	free(arr);
+	arr = NULL;
 }

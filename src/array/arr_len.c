@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   put_char.c                                         :+:      :+:    :+:   */
+/*   arr_len.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/28 16:39:54 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/07/25 15:59:15 by jschwabe         ###   ########.fr       */
+/*   Created: 2023/05/30 20:28:02 by jschwabe          #+#    #+#             */
+/*   Updated: 2024/02/20 11:55:16 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 /**
- * @brief write a character to stdout
- * @param c character to write
- * @return 1, -1 on write failure
+ * @brief strlen but for an array
+ * const void * const *arr
  */
-int	put_char(char c)
+size_t	arr_len(const char **arr)
 {
-	return (write(1, &c, 1));
+	size_t	len;
+
+	len = 0;
+	while (arr && arr[len] != NULL)
+		len++;
+	return (len);
 }

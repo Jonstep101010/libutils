@@ -1,15 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   atol.c                                             :+:      :+:    :+:   */
+/*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 14:07:22 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/07/14 14:36:30 by jschwabe         ###   ########.fr       */
+/*   Updated: 2024/02/20 11:33:01 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdbool.h>
+#include <limits.h>
 #include "libft.h"
 
 static bool	isprefix(char c)
@@ -31,7 +33,7 @@ long	ft_atol(const char *s)
 	while (s[i] == 32 || (s[i] > 8 && s[i] < 14))
 		i++;
 	if (isprefix(s[i] && isprefix(s[i + 1])))
-		return (LONG_MAX);
+		return (0);
 	if (isprefix(s[i]))
 	{
 		if (s[i] == '-')
@@ -45,14 +47,3 @@ long	ft_atol(const char *s)
 	}
 	return (total * notation);
 }
-
-// int main(void)
-// {
-// 	char *s = "2147483648";
-// 	long test = ft_atol(s);
-// 	// int	checkint = (int)test;
-// 	printf("%ld\n", test);
-// 	if (!check_overflow(test))
-// 		printf("Found INT overflow\n");
-// 	return (0);
-// }

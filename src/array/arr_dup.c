@@ -1,41 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   arr_dup.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/30 20:49:21 by jschwabe          #+#    #+#             */
-/*   Updated: 2023/07/25 15:57:23 by jschwabe         ###   ########.fr       */
+/*   Created: 2023/05/30 20:31:59 by jschwabe          #+#    #+#             */
+/*   Updated: 2024/02/20 14:55:48 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "arr_utils.h"
 
 /**
- * @brief output int n to file descriptor
- * @param n int to output
- * @param fd file descriptor on which to write
+ * @brief strdup but for a 2d array
  */
-void	ft_putnbr_fd(int n, int fd)
+char	**arr_dup(const char **arr)
 {
-	char	*nbrs;
+	char	**dup;
+	size_t	len;
+	int		i;
 
-	nbrs = "0123456789";
-	if (n == -2147483648)
-	{
-		ft_putstr_fd("-2147483648", fd);
-	}
-	if (n < 0)
-	{
-		ft_putstr_fd("-", fd);
-		n *= -1;
-	}
-	if (n > 9)
-	{
-		ft_putnbr_fd(n / 10, fd);
-		ft_putnbr_fd(n % 10, fd);
-	}
-	else
-		write(fd, nbrs + n, 1);
+	if (!arr)
+		return (NULL);
+	len = arr_len(arr) + 1;
+	dup = (char **) ft_calloc(sizeof(char *), len);
+	if (!dup)
+		return (NULL);
+	i = -1;
+	while (arr[++i])
+		dup[i] = ft_strdup(arr[i]);
+	return (dup);
 }
