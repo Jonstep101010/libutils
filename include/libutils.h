@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 16:26:52 by jschwabe          #+#    #+#             */
-/*   Updated: 2024/02/20 14:30:26 by jschwabe         ###   ########.fr       */
+/*   Updated: 2024/02/20 15:43:18 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,13 @@
 
 /* -------------------------------- external -------------------------------- */
 # include <stddef.h>
+# include "../src/array/arr_utils.h"
+# include "../src/string/str_utils.h"
 
 /* -------------------------------------------------------------------------- */
 /*                                    array                                   */
 /* -------------------------------------------------------------------------- */
-# include "../src/array/arr_utils.h"
+
 void		arr_free(char **arr);
 size_t		arr_len(const char **arr);
 char		**arr_dup(const char **arr);
@@ -28,7 +30,6 @@ void		print_arr(char **arr);
 /* -------------------------------------------------------------------------- */
 /*                                   string                                   */
 /* -------------------------------------------------------------------------- */
-# include "../src/string/str_utils.h"
 
 long		ft_atol(const char *s);
 
