@@ -6,12 +6,12 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 11:23:16 by jschwabe          #+#    #+#             */
-/*   Updated: 2024/02/20 13:11:59 by jschwabe         ###   ########.fr       */
+/*   Updated: 2024/02/20 16:05:14 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "arr_utils.h"
-#include "ft_printf.h"
+#include "./../../libftprintf/ft_printf.h"
 
 void	print_arr(char **arr)
 {

@@ -6,13 +6,13 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 14:07:22 by jschwabe          #+#    #+#             */
-/*   Updated: 2024/02/20 11:33:01 by jschwabe         ###   ########.fr       */
+/*   Updated: 2024/02/20 16:06:26 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdbool.h>
 #include <limits.h>
-#include "libft.h"
+#include "./../../libft/libft.h"
 
 static bool	isprefix(char c)
 {

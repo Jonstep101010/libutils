@@ -12,7 +12,7 @@ OBJS		:= $(addprefix $(BUILD_DIR)/, $(SRCS:.c=.o))
 LIBFT		:= ../libft/libft.a
 LIBFTPRINTF	:= ../libftprintf/libftprintf.a
 
-INC			 = -I../$(dir $(LIBFTPRINTF)) -I../$(dir $(LIBFT)) -I./include
+INC			 = -I./../$(dir $(LIBFTPRINTF)) -I./../$(dir $(LIBFT)) -I./include
 
 CC			:= clang
 CFLAGS		?= -Wall -Wextra -Werror -g
