@@ -1,12 +1,13 @@
 NAME		:= libutils.a
 
-VPATH		:= src/array:src/string
+VPATH		:= src/array:src/string:src/char
 
 SRC_ARR		:= arr_free.c arr_len.c arr_dup.c print_arr.c
 SRC_STR		:= ft_atol.c str_cchr.c idx_strchr.c
+SRC_CHAR	:= ft_isspace.c
 
 BUILD_DIR	:= .build
-SRCS		:= $(SRC_ARR) $(SRC_STR)
+SRCS		:= $(SRC_ARR) $(SRC_STR) $(SRC_CHAR)
 OBJS		:= $(addprefix $(BUILD_DIR)/, $(SRCS:.c=.o))
 
 LIBFT		:= ../libft/libft.a
