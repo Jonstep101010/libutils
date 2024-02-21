@@ -6,13 +6,13 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 20:07:56 by jschwabe          #+#    #+#             */
-/*   Updated: 2024/02/20 11:51:56 by jschwabe         ###   ########.fr       */
+/*   Updated: 2024/02/21 16:16:44 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void	arr_free(void **arr)
+void	arr_free(char **arr)
 {
 	int	i;
 
