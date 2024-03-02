@@ -1,10 +1,11 @@
 NAME		:= libutils.a
 
-VPATH		:= src/array:src/string:src/char
+VPATH		:= src/array:src/string:src/char:src/utils
 
-SRC_ARR		:= arr_free.c arr_len.c arr_dup.c print_arr.c
-SRC_STR		:= ft_atol.c str_cchr.c idx_strchr.c
-SRC_CHAR	:= ft_isspace.c
+SRC_ARR		:= arr_free.c arr_len.c arr_dup.c print_arr.c append_str.c
+SRC_STR		:= ft_atol.c str_cchr.c idx_strchr.c join_strings.c
+SRC_CHAR	:= is_something.c
+SRC_UTILS	:= free_mem.c
 
 BUILD_DIR	:= .build
 SRCS		:= $(SRC_ARR) $(SRC_STR) $(SRC_CHAR)

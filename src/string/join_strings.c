@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   arr_utils.h                                        :+:      :+:    :+:   */
+/*   join_strings.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/20 15:42:44 by jschwabe          #+#    #+#             */
-/*   Updated: 2024/03/02 20:59:25 by jschwabe         ###   ########.fr       */
+/*   Created: 2024/03/02 20:55:26 by jschwabe          #+#    #+#             */
+/*   Updated: 2024/03/02 20:55:36 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ARR_UTILS_H
-# define ARR_UTILS_H
+#include "libft.h"
 
-# include <stddef.h>
+char	*free_first_join(char *s1, const char *s2)
+{
+	char	*joined;
 
-size_t	arr_len(const char **arr);
+	joined = ft_strjoin((const char *)s1, s2);
+	free(s1);
+	return (joined);
+}
 
-void	arr_free(char **arr);
+/**
+ * @brief requires both strings to be heap allocated
+ */
+char	*free_both_join(char *s1, char *s2)
+{
+	char	*joined;
 
-char	**arr_dup(const char **arr);
-void	print_arr(char **arr);
-
-char	**append_str_arr(const char **arr, const char *s);
-char	**append_str_arr_free(char **arr, char *s);
-#endif
+	joined = ft_strjoin((const char *)s1, (const char *)s2);
+	free(s1);
+	free(s2);
+	return (joined);
+}
