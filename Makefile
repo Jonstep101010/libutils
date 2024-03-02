@@ -8,7 +8,7 @@ SRC_CHAR	:= is_something.c
 SRC_UTILS	:= free_mem.c
 
 BUILD_DIR	:= .build
-SRCS		:= $(SRC_ARR) $(SRC_STR) $(SRC_CHAR)
+SRCS		:= $(SRC_ARR) $(SRC_STR) $(SRC_CHAR) $(SRC_UTILS)
 OBJS		:= $(addprefix $(BUILD_DIR)/, $(SRCS:.c=.o))
 
 LIBFT		:= ../libft/libft.a

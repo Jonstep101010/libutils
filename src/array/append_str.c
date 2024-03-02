@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../libft/libft.h"
 #include "arr_utils.h"
 
 char	**append_str_arr(const char **arr, const char *s)
