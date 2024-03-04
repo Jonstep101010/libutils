@@ -24,11 +24,11 @@ char	**append_str_arr(const char **arr, const char *s)
 	len = arr_len((const char **)arr);
 	ret = (char **) ft_calloc(len + 2, sizeof(char *));
 	if (!ret)
-		return (NULL);// leave original array intact
+		return (NULL);
 	i = 0;
 	while (arr && arr[i] && i <= len)
 	{
-		ret[i] = ft_strdup(arr[i]);// duplicate instead
+		ret[i] = ft_strdup(arr[i]);
 		if (!ret[i])
 		{
 			arr_free(ret);
@@ -54,11 +54,11 @@ char	**append_str_arr_free(char **arr, char *s)
 	len = arr_len((const char **)arr);
 	ret = (char **) ft_calloc(len + 2, sizeof(char *));
 	if (!ret)
-		return (arr_free(arr), NULL);// leave original array intact
+		return (arr_free(arr), NULL);
 	i = 0;
 	while (arr && arr[i] && i <= len)
 	{
-		ret[i] = arr[i];// duplicate instead
+		ret[i] = arr[i];
 		if (!ret[i])
 		{
 			arr_free(ret);

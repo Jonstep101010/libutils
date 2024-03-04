@@ -23,6 +23,7 @@
 /* -------------------------------------------------------------------------- */
 
 # ifndef ARR_UTILS_H
+
 void		arr_free(char **arr);
 size_t		arr_len(const char **arr);
 char		**arr_dup(const char **arr);
@@ -36,13 +37,14 @@ char		**append_str_arr_free(char **arr, char *s);
 /* -------------------------------------------------------------------------- */
 
 # ifndef STR_UTILS_H
+
 long		ft_atol(const char *s);
 
 int			str_cchr(const char *s, char c);
 size_t		idx_strchr(const char *str, char c);
 
-char	*free_first_join(char *s1, const char *s2);
-char	*free_both_join(char *s1, char *s2);
+char		*free_first_join(char *s1, const char *s2);
+char		*free_both_join(char *s1, char *s2);
 # endif
 
 int			ft_isspace(int c);

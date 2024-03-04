@@ -12,7 +12,7 @@
 
 int	ft_isspace(int c)
 {
-	return (c == ' ' || (unsigned)c-'\t' < 5);
+	return (c == ' ' || (unsigned)c - '\t' < 5);
 }
 
 int	is_quote(int c)
