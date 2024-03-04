@@ -6,14 +6,14 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 20:58:35 by jschwabe          #+#    #+#             */
-/*   Updated: 2024/03/02 20:58:37 by jschwabe         ###   ########.fr       */
+/*   Updated: 2024/03/04 18:18:15 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft/libft.h"
 #include "arr_utils.h"
 
-char	**append_str_arr(const char **arr, const char *s)
+char	**append_str_arr(char *const *arr, const char *s)
 {
 	size_t	len;
 	size_t	i;
@@ -21,7 +21,7 @@ char	**append_str_arr(const char **arr, const char *s)
 
 	if (!s)
 		return (NULL);
-	len = arr_len((const char **)arr);
+	len = arr_len(arr);
 	ret = (char **) ft_calloc(len + 2, sizeof(char *));
 	if (!ret)
 		return (NULL);
@@ -42,6 +42,7 @@ char	**append_str_arr(const char **arr, const char *s)
 	return (ret);
 }
 
+
 // function that also frees all input
 char	**append_str_arr_free(char **arr, char *s)
 {
@@ -51,19 +52,16 @@ char	**append_str_arr_free(char **arr, char *s)
 
 	if (!s)
 		return (NULL);
-	len = arr_len((const char **)arr);
+	len = arr_len(arr);
 	ret = (char **) ft_calloc(len + 2, sizeof(char *));
 	if (!ret)
-		return (arr_free(arr), NULL);
+		return (arr_free(arr), free(s), NULL);
 	i = 0;
 	while (arr && arr[i] && i <= len)
 	{
 		ret[i] = arr[i];
 		if (!ret[i])
-		{
-			arr_free(ret);
-			return (NULL);
-		}
+			return (free(ret), free(s), arr_free(arr), NULL);
 		i++;
 	}
 	ret[i] = s;

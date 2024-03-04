@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 16:26:52 by jschwabe          #+#    #+#             */
-/*   Updated: 2024/03/02 21:01:05 by jschwabe         ###   ########.fr       */
+/*   Updated: 2024/03/04 13:48:09 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@
 # ifndef ARR_UTILS_H
 
 void		arr_free(char **arr);
-size_t		arr_len(const char **arr);
-char		**arr_dup(const char **arr);
-void		print_arr(char **arr);
-char		**append_str_arr(const char **arr, const char *s);
+size_t		arr_len(char *const *arr);
+char		**arr_dup(char *const *arr);
+void		print_arr(char *const *arr);
+char		**append_str_arr(char *const *arr, const char *s);
 char		**append_str_arr_free(char **arr, char *s);
 # endif
 

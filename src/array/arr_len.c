@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 20:28:02 by jschwabe          #+#    #+#             */
-/*   Updated: 2024/02/20 11:55:16 by jschwabe         ###   ########.fr       */
+/*   Updated: 2024/03/04 13:47:09 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
  * @brief strlen but for an array
  * const void * const *arr
  */
-size_t	arr_len(const char **arr)
+size_t	arr_len(char *const *arr)
 {
 	size_t	len;
 
