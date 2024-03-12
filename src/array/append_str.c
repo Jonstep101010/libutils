@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 20:58:35 by jschwabe          #+#    #+#             */
-/*   Updated: 2024/03/04 18:18:15 by jschwabe         ###   ########.fr       */
+/*   Updated: 2024/03/12 20:09:00 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ char	**append_str_arr(char *const *arr, const char *s)
 		return (arr_free(ret), NULL);
 	return (ret);
 }
-
 
 // function that also frees all input
 char	**append_str_arr_free(char **arr, char *s)

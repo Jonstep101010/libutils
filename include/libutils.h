@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 16:26:52 by jschwabe          #+#    #+#             */
-/*   Updated: 2024/03/04 13:48:09 by jschwabe         ###   ########.fr       */
+/*   Updated: 2024/03/12 21:04:26 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,12 @@ long		ft_atol(const char *s);
 
 int			str_cchr(const char *s, char c);
 size_t		idx_strchr(const char *str, char c);
+size_t		secure_strlen(const char *str);
 
 char		*free_first_join(char *s1, const char *s2);
 char		*free_both_join(char *s1, char *s2);
+
+char		*append_char_str(char *s, char c);
 # endif
 
 int			ft_isspace(int c);
