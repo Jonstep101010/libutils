@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 20:58:35 by jschwabe          #+#    #+#             */
-/*   Updated: 2024/03/12 20:09:00 by jschwabe         ###   ########.fr       */
+/*   Updated: 2024/03/25 13:16:33 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,26 +45,26 @@ char	**append_str_arr(char *const *arr, const char *s)
 // function that also frees all input
 char	**append_str_arr_free(char **arr, char *s)
 {
-	size_t	len;
-	size_t	i;
-	char	**ret;
+	const size_t	len = arr_len(arr);
+	char			**ret;
 
-	if (!s)
+	if (!s && !arr)
 		return (NULL);
-	len = arr_len(arr);
-	ret = (char **) ft_calloc(len + 2, sizeof(char *));
+	if (!s)
+		return (arr_free(arr), NULL);
+	if (!arr)
+	{
+		ret = append_str_arr(NULL, s);
+		free(s);
+		return (ret);
+	}
+	ret = ft_calloc(len + 2, sizeof(char *));
 	if (!ret)
 		return (arr_free(arr), free(s), NULL);
-	i = 0;
-	while (arr && arr[i] && i <= len)
-	{
-		ret[i] = arr[i];
-		if (!ret[i])
-			return (free(ret), free(s), arr_free(arr), NULL);
-		i++;
-	}
-	ret[i] = s;
-	if (!ret[i])
-		return (arr_free(ret), free(arr), NULL);
-	return (free(arr), ret);
+	ft_memcpy(ret, arr, (len) * sizeof(*arr));
+	ret[len] = s;
+	free(arr);
+	if (!ret[len])
+		return (arr_free(ret), NULL);
+	return (ret);
 }
