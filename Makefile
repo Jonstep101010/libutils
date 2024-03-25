@@ -23,9 +23,9 @@ CPPFLAGS	:= -MMD -MP
 # MAKEFLAGS	+= --no-print-directory --silent
 
 all: $(NAME)
-	@echo "\033[0;32m$(NAME) created\033[0m"
 
 $(NAME): $(OBJS)
+	@echo "\033[0;32m$(NAME) created\033[0m"
 	ar rcs $@ $^
 
 $(BUILD_DIR)/%.o: %.c

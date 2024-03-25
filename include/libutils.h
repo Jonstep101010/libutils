@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 16:26:52 by jschwabe          #+#    #+#             */
-/*   Updated: 2024/03/12 21:04:26 by jschwabe         ###   ########.fr       */
+/*   Updated: 2024/03/25 15:14:13 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 /* -------------------------------- external -------------------------------- */
 # include <stddef.h>
-# include "../src/array/arr_utils.h"
-# include "../src/string/str_utils.h"
+# include "arr_utils.h"
+# include "str_utils.h"
 
 /* -------------------------------------------------------------------------- */
 /*                                    array                                   */
