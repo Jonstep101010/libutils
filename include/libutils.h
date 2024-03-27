@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 16:26:52 by jschwabe          #+#    #+#             */
-/*   Updated: 2024/03/27 08:32:18 by jschwabe         ###   ########.fr       */
+/*   Updated: 2024/03/27 08:49:17 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,13 @@ size_t		secure_strlen(const char *str);
 char		*free_first_join(char *s1, const char *s2);
 char		*free_second_join(char const *s1, char *s2);
 char		*free_both_join(char *s1, char *s2);
-
+char		*str_join(const int count, ...);
+char		*free_strjoin(const int count, ...);
 char		*append_char_str(char *s, char c);
+
+void		free_n_null(int n, ...);
+void		free_n(int n, ...);
+
 # endif
 
 int			ft_isspace(int c);
