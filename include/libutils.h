@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 16:26:52 by jschwabe          #+#    #+#             */
-/*   Updated: 2024/03/27 09:06:06 by jschwabe         ###   ########.fr       */
+/*   Updated: 2024/03/27 22:44:12 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@
 void		arr_free(char **arr);
 size_t		arr_len(char *const *arr);
 char		**arr_dup(char *const *arr);
-void		print_arr(char *const *arr);
 char		**append_str_arr(char *const *arr, const char *s);
 char		**append_str_arr_free(char **arr, char *s);
 # endif
