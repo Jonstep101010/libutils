@@ -6,7 +6,7 @@
 /*   By: jschwabe <jschwabe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 16:26:52 by jschwabe          #+#    #+#             */
-/*   Updated: 2024/03/27 08:49:17 by jschwabe         ###   ########.fr       */
+/*   Updated: 2024/03/27 09:06:06 by jschwabe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,6 @@ int			ft_isspace(int c);
 int			is_quote(int c);
 
 void		free_null(void *p);
+size_t		memsize(void *arr, size_t size);
 
 #endif
